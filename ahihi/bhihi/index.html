@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Frontend Playground</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/codemirror.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/codemirror.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/mode/xml/xml.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/carlo/jquery-base64/master/jquery.base64.min.js"></script>
+        <style>
+          #result, #editor{width:600px;height: 400px;border: 1px solid #000;float: left;}
+        </style>
+    </head>
+    <body>
+        <textarea id="editor"></textarea>
+        
+        <button onclick="submit_html();">Submit</button>
+        <br>
+        <iframe id="result"></iframe>
+    </body>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+            lineNumbers: true,
+            mode:  "xml"
+        });
+
+        function submit_html()
+        {
+            editor.save();
+            var code = document.getElementById("editor").value;
+            var data_url = "data:text/html;charset=utf-8;base64," + $.base64.encode(code);
+            document.getElementById("result").src = data_url;
+        }
+    </script>
+</html>

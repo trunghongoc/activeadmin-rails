@@ -1,0 +1,16 @@
+<h4>change name (user_id = 7)</h4>
+<%= form_tag(define_a_method_admin_users_path, method: "get") do |form| %>
+  <input type="text" name="a" value="<%= @name %>">
+  <input type="submit" value="click">
+<% end %>
+
+<!-- <%= form_tag(admin_users_path, method: "post") do |form| %>
+  <div class="actions">
+    <span>email</span>
+    <input id="user_email" type="email" name="user[email]" placeholder="email" />
+  </div>
+
+  <div class="actions">
+    <input type="submit" value="save">
+  </div>
+<% end %> -->

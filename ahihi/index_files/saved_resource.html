@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://www.w3schools.com/angular/tryit.asp?filename=try_ng_databinding_two-way -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><script src="./angular.min.js"></script>
+</head><body>
+
+<div ng-app="myApp" ng-controller="myCtrl" class="ng-scope">
+    Name: <input ng-model="firstname" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+    <h1 class="ng-binding">John</h1>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstname = "John";
+    $scope.lastname = "Doe";    
+});
+</script>
+
+<p>Change the name inside the input field, and the model data will change automatically, and therefore also the header will change its value.</p>
+
+
+
+</body></html>
