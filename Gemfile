@@ -57,13 +57,3 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
-
-group :development do
-    gem 'capistrano',         require: false
-    gem 'capistrano-rvm',     require: false
-    gem 'capistrano-rails',   require: false
-    gem 'capistrano-bundler', require: false
-    gem 'capistrano3-puma',   require: false
-end
-
-# gem 'puma'
