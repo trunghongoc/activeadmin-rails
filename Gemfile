@@ -70,4 +70,4 @@ gem 'capistrano-passenger', '~> 0.2.0'
 gem 'capistrano-rbenv', '~> 2.1'
 
 # Add this if you're using rvm
-# gem 'capistrano-rvm'
+#gem 'capistrano-rvm'
