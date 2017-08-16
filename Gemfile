@@ -57,3 +57,17 @@ gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
+
+
+# Setting to deploy:
+
+#Capistra no
+gem 'capistrano', '~> 3.7', '>= 3.7.1'
+gem 'capistrano-rails', '~> 1.2'
+gem 'capistrano-passenger', '~> 0.2.0'
+
+# Add this if you're using rbenv
+gem 'capistrano-rbenv', '~> 2.1'
+
+# Add this if you're using rvm
+# gem 'capistrano-rvm'
