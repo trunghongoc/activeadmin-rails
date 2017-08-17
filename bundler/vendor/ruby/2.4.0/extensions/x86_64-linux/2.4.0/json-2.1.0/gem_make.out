@@ -1,0 +1,13 @@
+current directory: /home/zinza/test/activeadmin/bundler/vendor/ruby/2.4.0/gems/json-2.1.0/ext/json
+/home/zinza/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20170817-19469-p12cq5.rb extconf.rb
+creating Makefile
+
+current directory: /home/zinza/test/activeadmin/bundler/vendor/ruby/2.4.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/zinza/test/activeadmin/bundler/vendor/ruby/2.4.0/gems/json-2.1.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/zinza/test/activeadmin/bundler/vendor/ruby/2.4.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" install
