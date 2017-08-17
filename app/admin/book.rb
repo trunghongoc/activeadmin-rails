@@ -3,7 +3,7 @@ ActiveAdmin.register Book do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-# permit_params :user_id, :name, :price, :sale
+permit_params :user_id, :name, :price, :sale
 #
 # or
 #
