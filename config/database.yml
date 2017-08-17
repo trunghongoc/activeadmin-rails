@@ -21,10 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  host: 127.0.0.1
-  database: activeadmin_rails
-  username: root
-  password: zxcvbnm!@#
-  encoding: unicode
-  pool: 5
+  <<: *default
+  database: db/production.sqlite3
