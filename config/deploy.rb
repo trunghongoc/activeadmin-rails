@@ -4,7 +4,7 @@ lock "3.9.0"
 # set :application, "my_app_name"
 set :application, "activeadmin_rails"
 # set :repo_url, "git@example.com:me/my_repo.git"
-set :repo_url, "git@github.com:trunghongoc/activeadmin_rails.git"
+set :repo_url, "https://github.com/trunghongoc/activeadmin_rails.git"
 
 set :deploy_to, '/var/www/activeadmin_rails'
 append :linked_files, "config/database.yml", "config/secrets.yml"
