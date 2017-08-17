@@ -71,3 +71,5 @@ gem 'capistrano-rbenv', '~> 2.1'
 
 # Add this if you're using rvm
 #gem 'capistrano-rvm'
+
+gem 'nokogiri', '~> 1.8'
