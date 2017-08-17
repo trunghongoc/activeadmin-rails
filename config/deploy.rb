@@ -2,15 +2,15 @@
 lock "3.9.0"
 
 # set :application, "my_app_name"
-set :application, "ahihi_project"
+set :application, "activeadmin_rails"
 # set :repo_url, "git@example.com:me/my_repo.git"
-set :repo_url, "git@github.com:trunghongoc/activeadmin-rails.git"
+set :repo_url, "git@github.com:trunghongoc/activeadmin_rails.git"
 
-set :deploy_to, '/home/deploy/ahihi_project'
+set :deploy_to, '/var/www/activeadmin_rails'
 append :linked_files, "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
-
-
+set :branch,        :master
+set :use_sudo, true
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

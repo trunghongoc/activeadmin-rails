@@ -8,7 +8,7 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 # Replace 127.0.0.1 with your server's IP address!
-server '128.199.197.65', user: 'deploy', roles: %w{app db web}
+server '128.199.197.65', user: 'root', roles: %w{app db web}
 
 # role-based syntax
 # ==================
