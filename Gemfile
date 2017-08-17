@@ -10,6 +10,9 @@ end
 gem 'rails', '~> 5.1.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+gem 'nokogiri', '~> 1.8'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -73,4 +76,4 @@ gem 'capistrano-rbenv', '~> 2.1'
 # Add this if you're using rvm
 #gem 'capistrano-rvm'
 
-gem 'nokogiri', '~> 1.8'
+
