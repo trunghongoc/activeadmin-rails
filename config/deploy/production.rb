@@ -10,6 +10,13 @@
 # Replace 127.0.0.1 with your server's IP address!
 server '128.199.197.65', user: 'root', roles: %w{app db web}
 
+role :app, %w{128.199.197.65}
+role :web, %w{128.199.197.65}
+role :db, %w{128.199.197.65}
+
+
+set :branch, ENV['BRANCH'] || "master"
+
 # role-based syntax
 # ==================
 
