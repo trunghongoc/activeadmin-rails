@@ -12,7 +12,6 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 set :branch,        :master
 set :user, "root"
 set :use_sudo, true
-set :rbenv_type, :user
 set :rbenv_ruby, '2.4.0'
 set :bundle_flags, '--deployment'
 
