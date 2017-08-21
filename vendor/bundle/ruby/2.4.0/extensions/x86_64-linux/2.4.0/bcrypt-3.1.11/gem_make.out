@@ -1,0 +1,19 @@
+current directory: /home/zinza/test/activeadmin/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
+/home/zinza/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20170821-29131-1baco1m.rb extconf.rb
+creating Makefile
+
+current directory: /home/zinza/test/activeadmin/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/zinza/test/activeadmin/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/zinza/test/activeadmin/vendor/bundle/ruby/2.4.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_ext.so ./.gem.20170821-29131-18t9e00

@@ -1,0 +1,15 @@
+current directory: /home/zinza/test/activeadmin/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/home/zinza/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20170821-29131-ch7skl.rb extconf.rb
+creating Makefile
+
+current directory: /home/zinza/test/activeadmin/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/zinza/test/activeadmin/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/zinza/test/activeadmin/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20170821-29131-6zda1r

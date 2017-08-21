@@ -24,6 +24,7 @@ require 'capistrano/bundler'
 require 'capistrano/rbenv'
 set :rbenv_type, :user
 set :rbenv_ruby, '2.4.0'
+invoke :production
 
 # If you are using rvm add these lines:
 # require 'capistrano/rvm'
