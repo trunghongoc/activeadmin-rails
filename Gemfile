@@ -76,4 +76,6 @@ gem 'capistrano-rbenv', '~> 2.1'
 # Add this if you're using rvm
 #gem 'capistrano-rvm'
 
+gem 'mysql2', '~> 0.4.9'
+
 
