@@ -44,6 +44,7 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
+gem 'mysql2', '~> 0.4.9'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -76,6 +77,5 @@ gem 'capistrano-rbenv', '~> 2.1'
 # Add this if you're using rvm
 #gem 'capistrano-rvm'
 
-gem 'mysql2', '~> 0.4.9'
 
 
