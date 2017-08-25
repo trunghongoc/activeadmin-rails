@@ -1,5 +1,11 @@
 {
-  "name": "activeadmin",
+  "name": "name_ne",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.0.0",
+  "description": "khong co mo ta ",
+  "main": "index.js",
+  "repository": "https://github.com/trunghongoc/activeadmin-rails.git",
+  "author": "zinza dev <dev@zinza.com.vn>",
+  "license": "MIT"
 }
