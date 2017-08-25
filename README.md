@@ -51,5 +51,9 @@ Ví dụ: ssh root@123.123.123.123
 * * * chmod 700 ~/.ssh
 * * * touch ~/.ssh/authorized_keys
 * * * chmod 600 ~/.ssh/authorized_keys
-
-
+* * Mở file authorized_keys vừa tạo và insert key vào
+* * <strong>Chú ý: </strong> phải tắt SELinux để có thể đăng nhập bằng SSH key
+* * Cách tắt SELinux:
+* * * Mở file: <em><u>/etc/selinux/config</u></em>
+* * * Tìm <em><u>SELINUX=enforcing</u></em> và sửa thành <em><u>SELINUX=disabled</u></em>
+* * * Khởi động lại server: <em><u>reboot</u></em>
