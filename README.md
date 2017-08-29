@@ -71,18 +71,18 @@ Ví dụ: ssh root@123.123.123.123
   sudo apt-get update
   sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
 * cài ruby sử dụng rbenv
-	cd
-	git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-	echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-	echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-	exec $SHELL
+	&nbsp;&nbsp;&nbsp;&nbsp;cd
+	&nbsp;&nbsp;&nbsp;&nbsp;git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+	&nbsp;&nbsp;&nbsp;&nbsp;echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+	&nbsp;&nbsp;&nbsp;&nbsp;echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+	&nbsp;&nbsp;&nbsp;&nbsp;exec $SHELL
 
-	git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-	echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-	exec $SHELL
+	&nbsp;&nbsp;&nbsp;&nbsp;git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+	&nbsp;&nbsp;&nbsp;&nbsp;echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+	&nbsp;&nbsp;&nbsp;&nbsp;exec $SHELL
 
-	rbenv install 2.4.0
-	rbenv global 2.4.0
-	ruby -v
+	&nbsp;&nbsp;&nbsp;&nbsp;rbenv install 2.4.0
+	&nbsp;&nbsp;&nbsp;&nbsp;rbenv global 2.4.0
+	&nbsp;&nbsp;&nbsp;&nbsp;ruby -v
 #### 7. Cài đặt bundler
 <em><u>gem install bundler</u></em>
