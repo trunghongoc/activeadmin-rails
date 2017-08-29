@@ -70,19 +70,19 @@ Ví dụ: ssh root@123.123.123.123
 * Cài đặt và cập nhật môi trường trước khi cài ruby:
   sudo apt-get update
   sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
-* cài ruby sử dụng rbenv
-	&nbsp;&nbsp;&nbsp;&nbsp;cd
-	&nbsp;&nbsp;&nbsp;&nbsp;git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-	&nbsp;&nbsp;&nbsp;&nbsp;echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-	&nbsp;&nbsp;&nbsp;&nbsp;echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-	&nbsp;&nbsp;&nbsp;&nbsp;exec $SHELL
+* cài ruby sử dụng rbenv<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;cd<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;git clone https://github.com/rbenv/rbenv.git ~/.rbenv<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;echo 'eval "$(rbenv init -)"' >> ~/.bashrc<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;exec $SHELL<br>
 
-	&nbsp;&nbsp;&nbsp;&nbsp;git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-	&nbsp;&nbsp;&nbsp;&nbsp;echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-	&nbsp;&nbsp;&nbsp;&nbsp;exec $SHELL
+	&nbsp;&nbsp;&nbsp;&nbsp;git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;exec $SHELL<br>
 
-	&nbsp;&nbsp;&nbsp;&nbsp;rbenv install 2.4.0
-	&nbsp;&nbsp;&nbsp;&nbsp;rbenv global 2.4.0
-	&nbsp;&nbsp;&nbsp;&nbsp;ruby -v
+	&nbsp;&nbsp;&nbsp;&nbsp;rbenv install 2.4.0<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;rbenv global 2.4.0<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;ruby -v<br>
 #### 7. Cài đặt bundler
 <em><u>gem install bundler</u></em>
