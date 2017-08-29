@@ -40,7 +40,7 @@ Ví dụ: ssh root@123.123.123.123
 * Mỗi máy tính sẽ có 1 SSH key và key này là duy nhất, không bị trùng lặp với  bất kỳ máy tính nào.
 * Khi đăng nhập vào server theo cú pháp <em><u>ssh user_name@IP_VPS</u></em>, thay vì bạn phải nhập mật khẩu, giao thức SSH sẽ kiểm tra SSH key public trên máy bạn, sau đó kiểm tra key này có trên server hay không, nếu có sẽ đăng nhập thành công.
 #### 3. Ưu nhược điểm của việc đăng nhập bằng SSH public key
-* Ưu điểm:
+* Ưu điểm:<br>
     &nbsp;&nbsp;&nbsp;&nbsp;Độ bảo mật cao: việc đăng nhập không cần mật khẩu tạo độ tin cậy cao, trong bối cảnh chỉ máy tính cá nhân của mình mới có thể truy cập vào máy chủ, sẽ an toàn hơn việc dùng mật khẩu để đăng nhập. Nếu bạn lựa chọn hình thức  đăng nhập bằng mật khẩu, việc để lộ mật khẩu là không tránh khỏi, và việc này diễn ra thường xuyên thông qua các hình thức đánh cắp, hacker chiếm được mật khẩu và chiếm quyền kiểm soát server của bạn, vậy bạn mất trắng.
 * Nhược điểm: chính vì việc chỉ có máy được chấp nhận mới được đăng nhập vào server, khi máy tính cá nhân của bạn bị hỏng, sẽ không bao giờ đăng nhập lại được nữa (song điều này chỉ xảy ra  với tài khoản của bạn, quản trị viên quyền cao hơn có thể thêm lại SSH key của bạn vào server một lần nữa, và việc đăng nhập lại diễn ra bình thường)
 #### 4. Cách thêm SSH public key vào server
@@ -85,4 +85,38 @@ Ví dụ: ssh root@123.123.123.123
 	&nbsp;&nbsp;&nbsp;&nbsp;rbenv global 2.4.0<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;ruby -v<br>
 #### 7. Cài đặt bundler
-<em><u>gem install bundler</u></em>
+* Chạy:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em><u>gem install bundler</u></em><br>
+* Chạy lại lệnh sau khi đã cài bundler hoàn tất:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em><u>rbenv rehash </u></em><br>
+#### 8. Cài đặt nginx
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7<br>
+sudo apt-get install -y apt-transport-https ca-certificates<br>
+* Add Passenger APT repository<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger xenial main > /etc/apt/sources.list.d/passenger.list'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get update<br>
+
+* Install Passenger & Nginx<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install -y nginx-extras passenger<br>
+* khởi động nginx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sudo service nginx start<br>
+* Truy cập vào địa chỉ website của bạn và bạn sẽ thấy màn hình chào của nginx:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Vd: http://123.123.123.123<br>
+* Cập nhật cấu hình nginx để chỉ Passenger tới phiên bản ruby đang sử dụng (mở bằng vim):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sudo vim /etc/nginx/nginx.conf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tìm các dòng sau và bỏ ghi chú:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;##<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Phusion Passenger<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;##<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Uncomment it if you installed ruby-passenger or ruby-passenger-enterprise<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;##<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;include /etc/nginx/passenger.conf;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Lưu và đóng.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Mở /etc/nginx/passenger.conf và thay đổi nội dung:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sudo vim /etc/nginx/passenger.conf<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thay đổi dòng passenger_ruby để trỏ đến tệp thực thi ruby ​​của bạn:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;passenger_ruby /home/deploy/.rbenv/shims/ruby; # If you use rbenv
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# passenger_ruby /home/deploy/.rvm/wrappers/ruby-2.1.2/ruby; # If use use rvm, be sure to change the version number
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# passenger_ruby /usr/bin/ruby; # If you use ruby from source
+
