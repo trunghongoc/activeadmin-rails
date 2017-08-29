@@ -45,27 +45,27 @@ Ví dụ: ssh root@123.123.123.123
 * Nhược điểm: chính vì việc chỉ có máy được chấp nhận mới được đăng nhập vào server, khi máy tính cá nhân của bạn bị hỏng, sẽ không bao giờ đăng nhập lại được nữa (song điều này chỉ xảy ra  với tài khoản của bạn, quản trị viên quyền cao hơn có thể thêm lại SSH key của bạn vào server một lần nữa, và việc đăng nhập lại diễn ra bình thường)
 #### 4. Cách thêm SSH public key vào server
 * Lấy SSH key trên máy tính cá nhân bằng lệnh: <em><u>cat /home/laptop_name/.ssh/id_rsa.pub</u></em> , lệnh này có thể thay đổi phụ thuộc vào tên máy tính của bạn.
-* Thêm SSH key vừa lấy được vào server:
-    Tạo thư mục .ssh và file  authorized_keys trong thư mục .ssh:
-      mkdir ~/.ssh
-      chmod 700 ~/.ssh
-      touch ~/.ssh/authorized_keys
-      chmod 600 ~/.ssh/authorized_keys
-    Mở file authorized_keys vừa tạo và insert key vào
-    <strong>Chú ý: </strong> phải tắt SELinux để có thể đăng nhập bằng SSH key
-    Cách tắt SELinux:
-      Mở file: <em><u>/etc/selinux/config</u></em>
-      Tìm <em><u>SELINUX=enforcing</u></em> và sửa thành <em><u>SELINUX=disabled</u></em>
-      Khởi động lại server: <em><u>reboot</u></em>
-      Đăng nhập lại vào server để kiểm tra độ thành công.
+* Thêm SSH key vừa lấy được vào server:<br>
+    Tạo thư mục .ssh và file  authorized_keys trong thư mục .ssh:<br>
+      mkdir ~/.ssh<br>
+      chmod 700 ~/.ssh<br>
+      touch ~/.ssh/authorized_keys<br>
+      chmod 600 ~/.ssh/authorized_keys<br>
+    Mở file authorized_keys vừa tạo và insert key vào<br>
+    <strong>Chú ý: </strong> phải tắt SELinux để có thể đăng nhập bằng SSH key<br>
+    Cách tắt SELinux:<br>
+      Mở file: <em><u>/etc/selinux/config</u></em><br>
+      Tìm <em><u>SELINUX=enforcing</u></em> và sửa thành <em><u>SELINUX=disabled</u></em><br>
+      Khởi động lại server: <em><u>reboot</u></em><br>
+      Đăng nhập lại vào server để kiểm tra độ thành công.<br>
 #### 5. Tắt tính năng đăng nhập bằng mật khẩu
 * Sau khi đã add SSH key vào server, bạn hiện có 2 hình thức đăng nhập: 1 qua SSH, 1 qua cách truyền thống (nhập mật khẩu)
 * Cần phải tắt tính năng đăng nhập bằng mật khẩu để tăng tính bảo mật.
 * Các bước để tắt tính năng đăng nhập bằng mật khẩu:
-    Mở file: <em><u>/etc/ssh/sshd_config</u></em>
-    Đổi thành:
-      PasswordAuthentication no
-      UsePAM no
+    Mở file: <em><u>/etc/ssh/sshd_config</u></em><br>
+    Đổi thành:<br>
+      PasswordAuthentication no<br>
+      UsePAM no<br>
 #### 6. Cài đặt RUBY
 * Cài đặt và cập nhật môi trường trước khi cài ruby:
   sudo apt-get update
